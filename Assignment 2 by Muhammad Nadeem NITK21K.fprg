@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="1.7">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aneeqa manzoor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="10-May-21 7:13:29 AM"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size="" variables="name"/>
+            <declare name="gender" type="String" array="False" size="" variables="gender"/>
+            <declare name="sub" type="String" array="False" size="" variables="sub"/>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="sum" type="Integer" array="False" size="" variables="sum"/>
+            <declare name="average" type="Integer" array="False" size="" variables="average"/>
+            <declare name="myarray" type="Integer" array="True" size="6" variables="myarray[6]"/>
+            <output expression="&quot;Enter student name Please&quot;"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter Subject&quot;"/>
+            <input variable="sub"/>
+            <output expression="&quot;Enter Marks of the student&quot;"/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <input variable="myarray [i]"/>
+            </for>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <assign variable="sum" expression="sum + myarray[i]"/>
+            </for>
+            <assign variable="average" expression="sum/6"/>
+            <output expression="&quot;Enter gender of the student m or f&quot;"/>
+            <input variable="gender"/>
+            <if expression="gender = &quot;f&quot;">
+                <then>
+                    <if expression="average &lt; 1">
+                        <then>
+                            <output expression="sum"/>
+                            <output expression="sub"/>
+                            <output expression="average"/>
+                            <output expression="&quot;Hi,Ms  &quot; &amp;name"/>
+                            <output expression="&quot;You Failed&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="average &gt; 1">
+                                <then>
+                                    <output expression="sum"/>
+                                    <output expression="sub"/>
+                                    <output expression="average"/>
+                                    <output expression="&quot;Hi,Ms  &quot; &amp;name"/>
+                                    <output expression="&quot;Congratulations!! You Passed &quot;"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Enter Correct value Please&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="gender = &quot;m&quot;">
+                        <then>
+                            <if expression="average &lt; 1">
+                                <then>
+                                    <output expression="sum"/>
+                                    <output expression="sub"/>
+                                    <output expression="average"/>
+                                    <output expression="&quot;Hi,Mr  &quot; &amp;name"/>
+                                    <output expression="&quot;You Failed&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="average &gt; 1">
+                                        <then>
+                                            <output expression="sum"/>
+                                            <output expression="sub"/>
+                                            <output expression="average"/>
+                                            <output expression="&quot;Hi,Mr  &quot; &amp;name"/>
+                                            <output expression="&quot;Congratulations!! You Passed &quot;"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Enter Correct value Please&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Enter Correct value Please&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
