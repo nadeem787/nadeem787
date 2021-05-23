@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="1.7">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aneeqa manzoor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="10-May-21 5:57:55 AM"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size="" variables="a"/>
+            <declare name="b" type="Integer" array="False" size="" variables="b"/>
+            <declare name="c" type="Integer" array="False" size="" variables="c"/>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="z" type="Integer" array="False" size="" variables="z"/>
+            <for variable="i" start="1" end="3" direction="inc" step="1">
+                <output expression="&quot;Enter Value&quot; &amp;i"/>
+                <if expression="i == 1">
+                    <then>
+                        <input variable="a"/>
+                    </then>
+                    <else>
+                        <if expression="i == 2">
+                            <then>
+                                <input variable="b"/>
+                            </then>
+                            <else>
+                                <if expression="i == 3">
+                                    <then>
+                                        <input variable="c"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Enter Correct value Please&quot;"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Enter 1 for addition, 2 for multiplication, 3 for subtraction&quot;"/>
+            <input variable="z"/>
+            <if expression="z == 1">
+                <then>
+                    <assign variable="i" expression="a+b+c"/>
+                    <output expression="&quot;The result of Addition is &quot; &amp;i"/>
+                </then>
+                <else>
+                    <if expression="z == 2">
+                        <then>
+                            <assign variable="i" expression="a*b*c"/>
+                            <output expression="&quot;The result of Multiplication is &quot; &amp;i"/>
+                        </then>
+                        <else>
+                            <if expression="z == 3">
+                                <then>
+                                    <assign variable="i" expression="a-(b-c)"/>
+                                    <output expression="&quot;The result of Subtraction is &quot; &amp;i"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Enter correct value please&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
